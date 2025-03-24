@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; /* Позволяет футеру находиться внизу */
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    position: fixed; /* Закрепляет футер внизу */
+    bottom: 0;
+}
