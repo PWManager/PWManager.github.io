@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color Picker</title>
+    <script src="jscolor/jscolor.min.js"></script>
+    <script>
+        function changeBackground(color) {
+            document.body.style.background = color;
+        }
+        
+        function updateColor(picker) {
+            let colorHex = picker.toString();
+            changeBackground(colorHex)
+            console.log("Отладка: " + colorHex);
+            document.getElementById("color").textContent = "Color: " + colorHex;
+        }
+    </script>
+    <style>
+        body {
+            background-color: #3399FF; /* Initial background color */
+            background-attachment: scroll;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .picker {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background: white;
+        }
+        input {
+            font-size: 16px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="picker">
+        <!-- The initial value in the input field is synchronized with the body background color -->
+        <input value="3399FF" data-jscolor="{onInput:'updateColor(this)'}" id="colorp">
+        <h2 id="color">Color: #3399FF</h2>
+    </div>
+</body>
+</html>
