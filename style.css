@@ -19,3 +19,12 @@ footer {
     position: fixed; /* Закрепляет футер внизу */
     bottom: 0;
 }
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Высота баннера */
+}
